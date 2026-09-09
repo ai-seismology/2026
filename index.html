@@ -368,8 +368,46 @@
   .type-break { background: #F0EAE0; color: var(--earth); }
   .type-keynote { background: var(--accent-light); color: #9c4c17; }
   .type-panel { background: var(--stone); color: var(--deep); }
-  .session-title { font-weight: 500; color: var(--deep); margin-top: 2px; }
-  .session-speaker { font-size: 0.82rem; color: var(--muted); margin-top: 1px; }
+  .session-title {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--deep);
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  .session-speaker { font-size: 0.85rem; margin-top: 8px; }
+  .prog-speaker-name { font-weight: 700; color: #9c4c17; }
+  .prog-speaker-aff { font-weight: 400; color: var(--muted); }
+  .session-summary { font-size: 0.82rem; color: var(--muted); margin-top: 6px; line-height: 1.65; }
+
+  /* Minimal break rows */
+  .row-break td {
+    padding: 0.65rem 1.25rem;
+    border-bottom: 1px dashed #E5DDD0;
+    background: transparent !important;
+  }
+  .row-break .time-col {
+    font-weight: 500;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+  .break-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.8;
+  }
+  .break-caption {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
 
   /* REGISTRATION */
   #registration {
@@ -780,12 +818,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="row-break">
           <td class="time-col">09:30<br><span style="font-weight:400;color:var(--muted);font-size:0.75rem;">optional</span></td>
           <td>
-            <span class="session-type type-break">Doors open</span>
-            <div class="session-title">Complimentary morning coffee</div>
-            <div class="session-speaker">Arrive early if you'd like coffee before the 10:00 start — refreshments provided</div>
+            <span class="break-label">☕ Doors Open</span>
+            <div class="break-caption">Complimentary morning coffee — arrive early if you'd like coffee before the 10:00 start</div>
           </td>
         </tr>
         <tr>
@@ -793,74 +830,77 @@
           <td>
             <span class="session-type type-keynote">Opening</span>
             <div class="session-title">Introduction presentation</div>
-            <div class="session-speaker">Alessio Spurio Mancini &amp; Jonathan Paul, Royal Holloway</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Alessio Spurio Mancini &amp; Jonathan Paul</span><span class="prog-speaker-aff">, Royal Holloway</span></div>
           </td>
         </tr>
         <tr>
           <td class="time-col">10:15</td>
           <td>
             <span class="session-type type-talk">Talk #1</span>
-            <div class="session-speaker">Ana Ferreira, UCL</div>
+            <div class="session-title">TBC</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Ana Ferreira</span><span class="prog-speaker-aff">, UCL</span></div>
+            <div class="session-summary">TBC</div>
           </td>
         </tr>
         <tr>
           <td class="time-col">10:45</td>
           <td>
             <span class="session-type type-talk">Talk #2</span>
-            <div class="session-speaker">Andy Thompson, NSTA</div>
+            <div class="session-title">TBC</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Andy Thompson</span><span class="prog-speaker-aff">, NSTA</span></div>
+            <div class="session-summary">TBC</div>
           </td>
         </tr>
-        <tr>
+        <tr class="row-break">
           <td class="time-col">11:15</td>
-          <td>
-            <span class="session-type type-break">Break</span>
-            <div class="session-title">Mid-morning coffee break</div>
-            <div class="session-speaker">Refreshments provided</div>
-          </td>
+          <td><span class="break-label">☕ Coffee Break</span></td>
         </tr>
         <tr>
           <td class="time-col">11:45</td>
           <td>
             <span class="session-type type-talk">Talk #3</span>
-            <div class="session-speaker">Alex Saoulis, UCL</div>
+            <div class="session-title">TBC</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Alex Saoulis</span><span class="prog-speaker-aff">, UCL</span></div>
+            <div class="session-summary">TBC</div>
           </td>
         </tr>
         <tr>
           <td class="time-col">12:15</td>
           <td>
             <span class="session-type type-talk">Talk #4</span>
-            <div class="session-speaker">Chris Willacy, Shell</div>
+            <div class="session-title">Monitoring of Induced Seismicity – A journey from expert-dependent to autonomous methods</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Chris Willacy</span><span class="prog-speaker-aff">, Shell</span></div>
+            <div class="session-summary">This presentation will discuss the requirements for induced seismicity monitoring in industrial applications and how the technology is evolving from expert-dependent workflows toward AI-enabled autonomous systems. Using experience from monitoring the giant Groningen gas field with elastic full waveform inversion, the talk will illustrate the complexity of field-scale operations and the challenges that must be addressed to enable the next generation of microseismic monitoring applications.</div>
           </td>
         </tr>
-        <tr>
+        <tr class="row-break">
           <td class="time-col">12:45</td>
           <td>
-            <span class="session-type type-break">Lunch</span>
-            <div class="session-title">Lunch break</div>
-            <div class="session-speaker">Provided by catering at Stewart House</div>
+            <span class="break-label">🍽️ Lunch</span>
+            <div class="break-caption">Provided by catering at Stewart House</div>
           </td>
         </tr>
         <tr>
           <td class="time-col">14:00</td>
           <td>
             <span class="session-type type-talk">Talk #5</span>
-            <div class="session-speaker">Carolina M. García López, Royal Holloway</div>
+            <div class="session-title">Simulation-Based Inference for De-risking CCS and Seismic Source Inversion: Groningen Case Study</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Carolina M. García López</span><span class="prog-speaker-aff">, Royal Holloway</span></div>
+            <div class="session-summary">Monitoring induced seismicity is essential for de-risking Carbon Capture and Storage (CCS) operations. This presentation will introduce simulation-based inference (SBI), a machine-learning approach to seismic source inversion, through the case study of the Groningen gas field. It will explore how SBI can make this necessary task faster and more robust to non-Gaussian sources of error, while amortising the upfront training cost across many events instead of solving each one from scratch.</div>
           </td>
         </tr>
         <tr>
           <td class="time-col">14:30</td>
           <td>
             <span class="session-type type-talk">Talk #6</span>
-            <div class="session-speaker">Giuseppe Marra, NPL</div>
+            <div class="session-title">TBC</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Giuseppe Marra</span><span class="prog-speaker-aff">, NPL</span></div>
+            <div class="session-summary">TBC</div>
           </td>
         </tr>
-        <tr>
+        <tr class="row-break">
           <td class="time-col">15:00</td>
-          <td>
-            <span class="session-type type-break">Break</span>
-            <div class="session-title">Mid-afternoon coffee break</div>
-            <div class="session-speaker">Refreshments provided</div>
-          </td>
+          <td><span class="break-label">☕ Coffee Break</span></td>
         </tr>
         <tr>
           <td class="time-col">15:30</td>
@@ -875,7 +915,7 @@
           <td>
             <span class="session-type type-keynote">Closing</span>
             <div class="session-title">Closing remarks &amp; event ends</div>
-            <div class="session-speaker">Alessio Spurio Mancini &amp; Jonathan Paul, Royal Holloway</div>
+            <div class="session-speaker"><span class="prog-speaker-name">Alessio Spurio Mancini &amp; Jonathan Paul</span><span class="prog-speaker-aff">, Royal Holloway</span></div>
           </td>
         </tr>
       </tbody>
